@@ -141,7 +141,7 @@ a {
 
 /* Beranda */
 
-.beranda {
+.homee {
   position: relative;
   height: 800px;
   color: var(--white);
@@ -149,7 +149,7 @@ a {
   overflow: hidden;
 }
 
-.beranda-bg {
+.homee-bg {
   position: absolute;
   inset: 0;
   background-image: url("./assets/beranda-bg.jpeg");
@@ -159,18 +159,18 @@ a {
   transform: scale(1.03);
 }
 
-.beranda-overlay {
+.homee-overlay {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at center, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.8));
 }
 
-.beranda h1 {
+.homee h1 {
   font-size: clamp(28px, 4vw, 40px);
   margin: 0 0 16px;
 }
 
-.beranda-content {
+.homee-content {
   position: relative;
   height: 100%;
   display: flex;
@@ -183,7 +183,7 @@ a {
 
 }
 
-.beranda p {
+.homee p {
   margin: 0 0 24px;
   font-weight: 300;
 }
@@ -302,8 +302,12 @@ a {
 .car-image.placeholder {
   background: linear-gradient(135deg, #e1e1e1, #f3f3f3);
   border-radius: 14px;
-  height: 140px;
+  height: 220px;
   margin-bottom: 14px;
+  overflow: hidden;
+  display: flex; 
+  align-items: center;
+  justify-content: center;           
 }
 
 .car-card h3 {
@@ -506,7 +510,7 @@ a {
   overflow: hidden;
 }
 
-.cta .beranda-bg {
+.cta .homee-bg {
   background-image: url("https://images.pexels.com/photos/2449452/pexels-photo-2449452.jpeg?auto=compress&cs=tinysrgb&w=1600");
 }
 
@@ -672,7 +676,7 @@ a {
     display: block;
   }
 
-  .beranda {
+  .homee {
     height: 360px;
   }
 
