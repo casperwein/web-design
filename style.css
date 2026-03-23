@@ -1,4 +1,4 @@
-/* Base styles */
+/* Base Color */
 :root {
   --dark: #262626;
   --white: #ffffff;
@@ -17,7 +17,7 @@
 
 body {
   margin: 0;
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--dark);
   background-color: var(--white);
   line-height: 1.6;
@@ -84,11 +84,14 @@ a {
   display: flex;
   gap: 24px;
   font-size: 14px;
+  /* padding-left: px; */
 }
 
 .main-nav a {
   position: relative;
   padding-bottom: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .main-nav a::after {
@@ -213,6 +216,8 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   margin-bottom: 48px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
 }
 
 .feature-item {
@@ -230,7 +235,7 @@ a {
 
 .feature-item h3 {
   margin: 0 0 8px;
-  font-size: 18px;
+  font-size: 26px;
 }
 
 /* Secondary feature cards */
@@ -664,5 +669,9 @@ a {
 
   .cta-inner {
     margin-top: 0;
+  }
+
+  .feature-item {
+    box-shadow: var(--shadow-soft);
   }
 }
