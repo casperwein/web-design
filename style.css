@@ -242,7 +242,7 @@ a {
 
 .feature-cards {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   margin-bottom: 72px;
 }
@@ -367,8 +367,11 @@ a {
   background-color: var(--teal);
   color: var(--white);
   padding: 40px 0 48px;
-  border-radius: 26px 26px 0 0;
+  border-radius: 26px;
   margin-bottom: 60px;
+  width: 90%;
+  margin: auto;
+  
 }
 
 .testimonials h2 {
@@ -378,7 +381,7 @@ a {
 
 .testimonial-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -391,17 +394,48 @@ a {
   font-size: 13px;
 }
 
+.testimonial-card p {
+  text-align: center;
+}
+
 .rating {
   color: #f5b300;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .testimonial-author {
-  margin-top: 10px;
+  
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  align-content: end;
+}
+
+.author-name {
+  margin-top: 10px;
+  display: flex;
+  font-size: 16px;
+  color: var(--teal);
+}
+
+.author-city {
+  display: flex;
+  font-size: 14px;
   color: var(--gray);
+}
+
+.profile-author {
+  border-radius: 999px;
+  align-items: end;
+  width: 60px;
+  height: 60px;
+  background-color: var(--gray);
+  align-items: end;
+}
+
+.author-icon {
+  text-align: center;
+  justify-content: center;
 }
 
 /* Steps */
