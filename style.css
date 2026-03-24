@@ -331,6 +331,26 @@ a {
   font-size: 12px;
 }
 
+.car-specs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-details-spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.car-details-spec i {
+  color: var(--teal);
+}
+
+.car-details-spec p {
+  margin-left: 10px;
+}
+
 .car-meta {
   list-style: none;
   padding: 0;
