@@ -76,8 +76,8 @@ a {
 }
 
 .logo-text {
-  font-weight: 600;
-  font-size: 18px;
+ width: 20%;
+ padding-top: 20px;
 }
 
 .main-nav {
@@ -143,7 +143,7 @@ a {
 
 .homee {
   position: relative;
-  height: 800px;
+  height: 705px;
   color: var(--white);
   margin-bottom: 56px;
   overflow: hidden;
@@ -292,7 +292,7 @@ a {
 
 .car-card {
   background: #ffffff;
-  border-radius: 18px;
+  border-radius: 20px;
   padding: 18px 18px 20px;
   box-shadow: var(--shadow-soft);
   display: flex;
@@ -302,7 +302,7 @@ a {
 .car-image.placeholder {
   background: linear-gradient(135deg, #e1e1e1, #f3f3f3);
   border-radius: 14px;
-  height: 220px;
+  height: 215px;
   margin-bottom: 14px;
   overflow: hidden;
   display: flex; 
