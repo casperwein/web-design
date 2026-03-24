@@ -300,7 +300,7 @@ a {
 }
 
 .car-image.placeholder {
-  background: linear-gradient(135deg, #e1e1e1, #f3f3f3);
+  background: linear-gradient(135deg, --white, #f3f3f3);
   border-radius: 14px;
   height: 215px;
   margin-bottom: 14px;
@@ -308,6 +308,23 @@ a {
   display: flex; 
   align-items: center;
   justify-content: center;           
+}
+
+.type-price {
+  display: flex;
+  justify-content: space-between;
+  word-wrap: normal;
+  /* align-items: center; */
+}
+
+.price {
+  text-align: right;
+  /* align-items: center; */
+}
+
+.daily-price {
+  font-size: 12px;
+  /* color: var(--gray); */
 }
 
 .car-card h3 {
@@ -324,11 +341,13 @@ a {
 .car-price {
   margin: 0 0 10px;
   font-weight: 600;
+  color: var(--teal);
 }
 
 .car-price span {
   font-weight: 400;
   font-size: 12px;
+  color: var(--gray);
 }
 
 .car-specs {
@@ -369,7 +388,7 @@ a {
 .btn-secondary {
   margin-top: auto;
   align-self: stretch;
-  border-radius: 999px;
+  border-radius: 8px;
   border: none;
   padding: 10px 16px;
   font-size: 13px;
@@ -378,8 +397,6 @@ a {
   background-color: var(--teal-dark);
   color: var(--white);
 }
-
-.button
 
 .btn-secondary:hover {
   background-color: var(--teal);
@@ -395,7 +412,6 @@ a {
   margin-bottom: 60px;
   width: 90%;
   margin: auto;
-  
 }
 
 .testimonials h2 {
@@ -470,9 +486,11 @@ a {
 }
 
 .steps-subtitle {
-  margin: 0 0 8px;
+  margin: 50px 0 10px;
   font-size: 13px;
   color: var(--gray);
+  font-size: 18px;
+  color: var(--teal);
 }
 
 .steps h2 {
