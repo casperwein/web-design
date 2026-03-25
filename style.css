@@ -74,7 +74,7 @@ a {
   font-size: 14px;
   font-weight: 600;
 }
-
+ 
 .logo-text {
  width: 20%;
  padding-top: 20px;
@@ -332,6 +332,15 @@ a {
   font-size: 16px;
 }
 
+.miror {
+  transform:scalex(-1)
+}
+
+.car-6{
+  transform: scaleX(-1);
+  height: 215px;
+  width: 370px
+}
 .car-type {
   margin: 0 0 8px;
   font-size: 13px;
