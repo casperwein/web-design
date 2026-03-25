@@ -510,7 +510,7 @@ a {
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  align-items: center;
+  align-items: stretch;
   gap: 8px;
 }
 
@@ -546,42 +546,46 @@ a {
 .step-line {
   height: 1px;
   background: linear-gradient(to right, transparent, var(--gray), transparent);
+  margin-top: 80%
 }
 
-/* CTA */
+/* Banner */
 
-.cta {
+.banner {
   position: relative;
-  height: 280px;
+  height: 360px;
   margin-bottom: 72px;
+  margin: auto;
   overflow: hidden;
+  background-image: url("./assets/beranda-bg.jpeg");
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-.cta .homee-bg {
-  background-image: url("https://images.pexels.com/photos/2449452/pexels-photo-2449452.jpeg?auto=compress&cs=tinysrgb&w=1600");
-}
-
-.cta-inner {
-  position: relative;
+.banner-inner {
+  position:relative;
   background: var(--teal);
   border-radius: 26px;
   padding: 32px 28px;
   max-width: 720px;
-  margin-top: 40px;
   color: var(--white);
   box-shadow: var(--shadow-soft);
+
 }
 
-.cta-inner h2 {
+.banner-inner h2 {
   margin: 0 0 10px;
   font-size: 26px;
 }
 
-.cta-inner p {
+.banner-inner p {
   margin: 0 0 16px;
 }
 
-.cta-tags {
+.banner-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -595,7 +599,7 @@ a {
   font-size: 12px;
 }
 
-.cta-note {
+.banner-note {
   font-size: 13px;
 }
 
@@ -603,8 +607,8 @@ a {
 
 .site-footer {
   background: #ffffff;
-  padding-top: 40px;
-  border-top: 1px solid #e5e5e5;
+  padding-top: 70px;
+  /* border-top: 1px solid #e5e5e5; */
 }
 
 .footer-grid {
@@ -657,7 +661,7 @@ a {
   color: var(--gray);
 }
 
-/* Responsive */
+/* Media screen */
 
 @media (max-width: 960px) {
   .features {
@@ -682,14 +686,14 @@ a {
   }
 
   .step-line {
-    display: none;
+    margin-top: 0;
   }
 
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .cta-inner {
+  .banner-inner {
     margin-top: 24px;
   }
 }
@@ -747,13 +751,14 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .cta {
+  .banner {
     height: auto;
     padding: 32px 0 40px;
   }
 
-  .cta-inner {
-    margin-top: 0;
+  .banner-inner {
+    margin: 0 5% 0 5%;
+    
   }
 
   .feature-item {
