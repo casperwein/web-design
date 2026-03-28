@@ -29,13 +29,16 @@
     </div>
   </header>
   <div class="page">
-    <aside class="side-panel"></aside>
+    <aside class="side-panel">
+      <div class="image-panel">
+        <img src="/assets/booking-panel.jpeg" alt="">
+      </div>
+    </aside>
 
     <main class="content">
       <h1>Pesan Sekarang</h1>
 
       <form class="order-form">
-        <!-- top two columns -->
         <div class="grid-2">
           <div class="field">
             <label>Nama Lengkap</label>
@@ -55,7 +58,6 @@
           </div>
         </div>
 
-        <!-- toggle -->
         <div class="driver-toggle" id="driverToggle">
           <button type="button" data-mode="driver" class="active">
             Dengan Sopir
@@ -65,20 +67,23 @@
           </button>
         </div>
 
-        <!-- rental info -->
         <div class="grid-2">
           <div class="field">
             <label>Tanggal Mulai</label>
             <div class="input-with-icon">
               <input type="date" />
-              <span class="calendar-icon">📅</span>
+              <span class="calendar-icon">
+                <i class="fi-rr-calendar"></i>
+              </span>
             </div>
           </div>
           <div class="field">
             <label>Tanggal Selesai</label>
             <div class="input-with-icon">
               <input type="date" />
-              <span class="calendar-icon">📅</span>
+              <span class="calendar-icon">
+                <i class="fi-rr-calendar"></i>
+              </span>
             </div>
           </div>
           <div class="field">
@@ -93,13 +98,14 @@
           
         </div>
 
-        <!-- submit -->
-        <button type="submit" class="wa-button">
-          Lanjut ke WhatsApp untuk Verifikasi
-          <span class="wa-icon">
-            <i class="fi-brands-whatsapp"></i>
-          </span>
-        </button>
+        <div class="submmit-wa">
+          <button type="submit" class="wa-button">
+            Lanjut ke WhatsApp untuk Verifikasi
+            <span class="wa-icon">
+              <i class="fi-brands-whatsapp"></i>
+            </span>
+          </button>
+        </div>
       </form>
     </main>
   </div>
