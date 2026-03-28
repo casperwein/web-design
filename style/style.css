@@ -152,7 +152,7 @@ a {
 .homee-bg {
   position: absolute;
   inset: 0;
-  background-image: url("./assets/beranda-bg.jpeg");
+  background-image: url("../assets/beranda-bg.jpeg");
   background-size: cover;
   background-position: center;
   filter: blur(1px);
@@ -557,7 +557,7 @@ a {
   margin-bottom: 72px;
   margin: auto;
   overflow: hidden;
-  background-image: url("./assets/beranda-bg.jpeg");
+  background-image: url("../assets/beranda-bg.jpeg");
   border-radius: 15px;
   display: flex;
   align-items: center;
