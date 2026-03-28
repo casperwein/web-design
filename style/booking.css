@@ -19,7 +19,7 @@ body {
 
 /* Left colored panel */
 .side-panel {
-  flex: 0 0 28%;
+  flex: 0 0 20%;
   background: #2f6b76;
   border-radius: 0 32px 32px 0;
   display: flex;
@@ -33,8 +33,8 @@ body {
 
 .image-panel img {
   border-radius: 16px;
-  width: 100%;
-  width: 90%;
+  height: 700px;
+  width: 400px;
   margin: 0 auto;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -170,7 +170,8 @@ h1 {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+
+@media (max-width: 760px) {
   .side-panel {
     display: none;
   }
@@ -185,5 +186,11 @@ h1 {
 
   .order-form {
     max-width: 100%;
+  }
+}
+
+@media (min-width: 761px) {
+  .submmit-wa {
+    margin-top: 200px;
   }
 }

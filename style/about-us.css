@@ -67,7 +67,7 @@ body {
 }
 
 .about-vid{
-    margin:40px 0 40px 0;
+    margin:0px 0 40px 0;
 }
 
 .about-vid video{
@@ -122,4 +122,28 @@ body {
 .about-small-img img{
     width:100%;
     border-radius:12px;
+}
+
+.about-text ul.about-list {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.about-text ul.about-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-text ul.about-list li i {
+  margin-right: 12px;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+
+.about-text ul.about-list li span {
+  flex: 1; 
 }
