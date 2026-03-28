@@ -403,7 +403,7 @@ a {
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  background-color: var(--teal-dark);
+  background-color: var(--teal);
   color: var(--white);
 }
 

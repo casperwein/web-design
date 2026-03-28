@@ -31,21 +31,6 @@
     gap:16px; 
     flex-wrap:wrap;
 }
-        
-.navbar .menu{
-    display:flex; 
-    gap:18px; 
-    font-weight:600; 
-    font-size:14px;
-    font-family: "Open Sans", Arial, sans-serif;
-}
-      
-.navbar .logo img{
-   display: grid;
-  align-items: center; 
-  height: 100px;
-  padding-right: 100px;
-}
 
 .spanduk {
     width:100%; 
@@ -297,7 +282,15 @@
   transition: color 0.2s ease;
 }
 
+@media (max-width: 720px) {
+  .header-inner {
+    height: 56px;
+  }
 
+  .car-grid{
+    grid-template-columns: 1fr; 
+}
+}
 
 
 </style>
@@ -324,7 +317,7 @@
         <img src="./assets/car-list/Spanduk.png" alt="Spanduk">
     </div>
     <div class="select">
-        <h1>Car Selection</h1>
+        <h1>Pilih Mobil</h1>
     </div>
 
     <div class="car-grid">
