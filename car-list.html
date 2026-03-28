@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TugasUTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- untuk icon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+
+    <link rel="stylesheet" href="/style/navbar-footer.css">
+    <style>
+*{
+    box-sizing: border-box; 
+    margin:0; 
+    padding:0;
+ }
+        
+     
+.navbar {
+    background:#ffffff; 
+    border-bottom:1px solid #ddd; 
+    padding:16px 24px; 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap:16px; 
+    flex-wrap:wrap;
+}
+
+.spanduk {
+    width:100%; 
+    max-width:1280px; 
+    margin:20px auto; 
+    display:flex; 
+    justify-content:center;
+}
+
+.select{
+    width:100%; 
+    max-width:1280px; 
+    margin:20px auto;  
+    align-items:center; 
+
+    gap:24px;
+}
+
+.select h1{
+    font-size:32px; 
+    font-family: "Open Sans", Arial, sans-serif;
+    color:#0f4f5f;
+    text-align: center
+}
+        
+.car-grid{
+    width:100%;
+    max-width:1280px; 
+    margin:0 auto 30px auto; 
+    display:grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap:20px;
+    align-items: stretch;
+}
+
+.car {
+    background:#fff; 
+    border-radius:8px; 
+    overflow:hidden; 
+    box-shadow:0 6px 18px rgba(0,0,0,.1); 
+    display:flex; 
+    flex-direction:column;
+    height: 100%;
+}
+
+.car-image{
+    height: 170px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
+        
+.car-body{
+    padding:14px 16px; 
+    flex:1 1 auto; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-between;
+}
+        
+
+.car-title{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+    max-width: 160px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+        
+.car-sub{
+    font-size: 0.85rem;
+    color: #888888;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+        
+.car-price-group {
+  text-align: right;
+}
+
+.price{
+    font-size: 1.25rem;
+  font-weight: 700;
+  color: #317a8a; 
+  display: block;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+        
+.per-day{
+    font-size:12px; 
+    color:#72818a;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+        
+.specs{
+    display:flex; 
+    gap: 20px;
+    flex-wrap:wrap;  
+    margin:20px 0;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+       
+.spec{
+    align-items:center; 
+    gap:6px; 
+    font-size:13px; 
+    padding:5px 8px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.spec img {
+    width: 16px;
+    height: 16px;
+}
+.btn{
+    display:inline-block; 
+    text-decoration:none; 
+    background:#2d91a8; 
+    color:#fff; 
+    text-align:center; 
+    font-weight:700; 
+    border-radius:6px; 
+    padding:10px 12px; 
+    margin-top:8px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+
+.footer {
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #ffffff;
+  padding: 60px 20px;
+  color: #333333;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px; 
+}
+
+
+.footer-brand {
+  flex: 0 0 300px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo img {
+  display: grid;
+  align-items: center; 
+  height: 150px;
+  padding-right: 100px;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.brand-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #111827;
+  font-weight: 600; 
+  margin: 0 0 30px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  height : 24px;
+  width: 120px;
+}
+
+
+.footer-info {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contact-row {
+  display: flex;
+  margin-bottom: 40px; 
+  padding-bottom: 30px; 
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 120px;
+}
+
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-label {
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+
+.row {
+  display: flex;
+  gap: 140px; 
+  padding-left: 60px; 
+}
+
+.column h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 20px 0;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.column p {
+  text-decoration: none;
+  color: #4B5563;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    height: 56px;
+  }
+
+  .car-grid{
+    grid-template-columns: 1fr; 
+}
+}
+
+
+</style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <img class="logo-text" src="assets/logo.png" alt="logo">
+            </div>
+            <nav class="main-nav">
+                <a href="/index.html">Beranda</a>
+                <a href="/index.html#mobil">Mobil</a>
+                <a href="/about-us.html">Tentang</a>
+                <a href="/contact-us.html">Kontak</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="spanduk">
+        <img src="./assets/car-list/Spanduk.png" alt="Spanduk">
+    </div>
+    <div class="select">
+        <h1>Pilih Mobil</h1>
+    </div>
+
+    <div class="car-grid">
+
+
+    <div class="car">
+        <div class="car-image">
+        <img src="./assets/car-list/Innova reborn.webp" alt="Toyota Innova Reborn">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Innova Reborn</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+            <div class="car-price-group">
+                <div class="price">Rp1.000.000</div>    
+                <div class="per-day">per-hari</div>
+            </div>
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 7 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+
+    </div>
+
+
+    <div class="car">
+        <div class="car-image">
+        <img src="./assets/car-list/Toyota Innova zenix.png" alt="Toyota Innova Zenix">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Innova Zenix</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp1.400.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Automat</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 7 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+
+    <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota New Venturer.png" alt="Toyota Innova Venturer">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Innova Venturer</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp1.200.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Diesel/Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 7 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+
+    <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Fortuner.png" alt="Toyota Fortuner">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Fortuner</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp2.000.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Diesel/Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 7 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+    
+     <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Hiace Commuter.png" alt="Toyota Hiace Commuter">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Hiace Commuter</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp3.000.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Diesel</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 12-15 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>  
+    </div>
+    
+
+       <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Hiace Premio.png" alt="Toyota Hiace Premio">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Hiace Premio</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp3.500.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Diesel</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 10-12 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+        <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Vios.png" alt="Toyota Vios">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Vios</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp3.700.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 5 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+     <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Camry.webp" alt="Toyota Camry">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Camry</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp1.500.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 5 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+      <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Honda Brio.jpg" alt="Honda Brio">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Honda Brio</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp450.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 5 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+      <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Agya.png" alt="Toyota Agya">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Agya</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp400.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 5 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+      <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Avanza.jpg" alt="Toyota Avanza">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Avanza</h3>
+                <div class="car-sub">MPV</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp450.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 7 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+      <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Mitsubishi Xpander.jpg" alt="Mitsubishi Xpander">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Mitsubishi Xpander</h3>
+                <div class="car-sub">MPV</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp450.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Auto/Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 7 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+    
+      <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Isuzu Elf (Long).png" alt="Isuzu Elf (Long)">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Isuzu Elf (Long)</h3>
+                <div class="car-sub">Microbus</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp3.500.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Diesel</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 19 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+      <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Alphard.jpg" alt="Toyota Alphard">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Alphard</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp2.500.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Automat</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 7 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+      <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Pajero Sport.jpg" alt="Pajero Sport">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Pajero Sport</h3>
+                <div class="car-sub">MPV</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp1.600.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Diesel</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 7 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+    <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Honda Jazz.jpg" alt="Honda Jazz">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Honda Jazz</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp2.000.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Manual</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Diesel/Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 5 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+    <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota Corolla Cross.jpg" alt="Toyota Corolla Cross">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota Corolla Cross</h3>
+                <div class="car-sub">Sedan</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp1.100.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> automat</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Listrik</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 5 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+    <div class="car">
+        <div class="car-image">
+            <img src="./assets/car-list/Toyota New Altis.webp" alt="Toyota New Altis">
+        </div>
+        <div class="car-body">
+            <div>
+            <div class="car-title-group">
+                <h3 class="car-title">Toyota New Altis</h3>
+                <div class="car-sub">MPV</div>
+            </div>
+
+            <div class="car-price-group">
+                <div class="price">Rp1.800.000</div>
+                <div class="per-day">per-hari</div>
+            </div>
+
+                <div class="specs">
+                    <div class="spec"><img src="./assets/car-list/type.png" alt="Auto/Manual"> Automat</div>
+                    <div class="spec"><img src="./assets/car-list/fuel.png" alt="Bensin"> Bensin</div>
+                    <div class="spec"><img src="./assets/car-list/seats.png" alt="7 Orang"> 5 Orang</div>
+                </div>
+            </div>
+            <a href="/booking-page.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </div>
+</div>
+
+ <footer class="site-footer" id="kontak">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Car Rental</h4>
+        <p>
+          Menyediakan mobil di area tertentu dengan menawarkan kemudahan dan
+          kenyamanan bagi pelanggan.
+        </p>
+        <div class="footer-social">
+          <span><i class="fi-brands-instagram"></i></span>
+          <span><i class="fi-brands-facebook"></i></span>
+          <span><i class="fi-brands-whatsapp"></i></span>
+          <span><i class="fi-brands-twitter"></i></span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Alamat</h4>
+        <p>Jakarta, Bandung, Jawa</p>
+
+        <h4>Link Aktif</h4>
+        <ul>
+          <li><a href="/about-us.html">Tentang Kami</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Email</h4>
+        <p>TimetoGo@gmail.com</p>
+
+        <h4>Mobil</h4>
+        <ul>
+          <li><a href="#mobil">Sedan</a></li>
+          <li><a href="#mobil">MPV</a></li>
+          <li><a href="#mobil">Pick Up</a></li>
+          <li><a href="#mobil">SUV</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Phone</h4>
+        <p>+627 5471 9999</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Time to Go. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+</html>

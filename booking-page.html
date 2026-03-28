@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+
+  <title>Pesan Sekarang</title>
+  <link rel="stylesheet" href="style/booking.css" />
+  <link rel="stylesheet" href="style/navbar-footer.css" />
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <img class="logo-text" src="assets/logo.png" alt="logo">
+        </div>
+        <nav class="main-nav">
+            <a href="/index.html">Beranda</a>
+            <a href="/index.html#mobil">Mobil</a>
+            <a href="/about-us.html">Tentang</a>
+            <a href="/contact-us.html">Kontak</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+  </header>
+  <div class="page">
+    <aside class="side-panel">
+      <div class="image-panel">
+        <img src="/assets/booking-panel.jpeg" alt="">
+      </div>
+    </aside>
+
+    <main class="content">
+      <h1>Pesan Sekarang</h1>
+
+      <form class="order-form">
+        <div class="grid-2">
+          <div class="field">
+            <label>Nama Lengkap</label>
+            <input type="text" placeholder="Masukkan nama lengkap" />
+          </div>
+          <div class="field">
+            <label>Tempat Tinggal</label>
+            <input type="text" placeholder="Masukkan domisili" />
+          </div>
+          <div class="field">
+            <label>Nomor Whatsapp</label>
+            <input type="tel" placeholder="Nomor WhatsApp" />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="Alamat email" />
+          </div>
+        </div>
+
+        <div class="driver-toggle" id="driverToggle">
+          <button type="button" data-mode="driver" class="active">
+            Dengan Sopir
+          </button>
+          <button type="button" data-mode="no-driver">
+            Tanpa Sopir
+          </button>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label>Tanggal Mulai</label>
+            <div class="input-with-icon">
+              <input type="date" />
+              <span class="calendar-icon">
+                <i class="fi-rr-calendar"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Tanggal Selesai</label>
+            <div class="input-with-icon">
+              <input type="date" />
+              <span class="calendar-icon">
+                <i class="fi-rr-calendar"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Lokasi Tujuan / Pengembalian</label>
+            <input type="text" placeholder="Lokasi tujuan / pengembalian" />
+          </div>
+
+          <div class="field">
+            <label>Lokasi Penjemputan</label>
+            <input type="text" placeholder="Lokasi penjemputan" id="pickupInput" />
+          </div>
+          
+        </div>
+
+        <div class="submmit-wa">
+          <button type="submit" class="wa-button">
+            Lanjut ke WhatsApp untuk Verifikasi
+            <span class="wa-icon">
+              <i class="fi-brands-whatsapp"></i>
+            </span>
+          </button>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script>
+    // toggle
+    const toggle = document.getElementById('driverToggle');
+    const buttons = toggle.querySelectorAll('button');
+    const pickupInput = document.getElementById('pickupInput');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const mode = btn.dataset.mode;
+        if (mode === 'driver') {
+          pickupInput.placeholder = 'Lokasi penjemputan (dengan sopir)';
+        } else {
+          pickupInput.placeholder = 'Lokasi pengambilan mobil (lepas kunci)';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
